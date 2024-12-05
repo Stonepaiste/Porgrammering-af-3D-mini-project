@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4585630187838670}
   - component: {fileID: 205632515316054554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_06_Forest_cheap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,6 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215118662403220}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,7 +36,6 @@ Transform:
   - {fileID: 8426258975971308844}
   - {fileID: 3111033067133465690}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!205 &205632515316054554
 LODGroup:
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 3111033067133465690}
   - component: {fileID: 3082354363606566791}
   - component: {fileID: 4406457640047254330}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_06_forest_LOD4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,13 +97,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2368619987690770744}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4585630187838670}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3082354363606566791
 MeshFilter:
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 8426258975971308832}
   - component: {fileID: 8426258975967884546}
   - component: {fileID: 8426258975968884674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_06_forest_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,13 +180,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8426258975970879744}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4585630187838670}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8426258975967884546
 MeshFilter:
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 8426258975967884548}
   - component: {fileID: 8426258975968884676}
   - component: {fileID: 5261769892634344395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_06_forest_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,13 +265,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8426258975970879746}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4585630187838670}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8426258975967884548
 MeshFilter:
@@ -332,8 +332,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8426258975970879746}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.44
   m_Height: 19.11
   m_Direction: 1
@@ -349,7 +358,7 @@ GameObject:
   - component: {fileID: 8426258975971308844}
   - component: {fileID: 8426258975967884558}
   - component: {fileID: 8426258975968884686}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_06_forest_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,13 +372,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8426258975970879756}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4585630187838670}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8426258975967884558
 MeshFilter:
@@ -433,7 +442,7 @@ GameObject:
   - component: {fileID: 8426258975971308846}
   - component: {fileID: 8426258975967884544}
   - component: {fileID: 8426258975968884672}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_06_forest_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,13 +456,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8426258975970879758}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4585630187838670}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8426258975967884544
 MeshFilter:

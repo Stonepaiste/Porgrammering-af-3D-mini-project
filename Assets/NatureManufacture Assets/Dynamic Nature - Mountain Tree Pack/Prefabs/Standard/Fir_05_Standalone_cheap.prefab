@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4975862715486574}
   - component: {fileID: 205855054275415602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_05_Standalone_cheap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,6 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492687703916904}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,7 +36,6 @@ Transform:
   - {fileID: 7974733304040646232}
   - {fileID: 6022715043509997743}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!205 &205855054275415602
 LODGroup:
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 6022715043509997743}
   - component: {fileID: 4143997144194919149}
   - component: {fileID: 1532193801719635402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_05_standalone_LOD4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,13 +97,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969804646176819423}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4975862715486574}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4143997144194919149
 MeshFilter:
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 7974733304040646228}
   - component: {fileID: 7974733304041940598}
   - component: {fileID: 7974733304042939574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_05_standalone_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,13 +180,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7974733304040946292}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4975862715486574}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7974733304041940598
 MeshFilter:
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 7974733304041940592}
   - component: {fileID: 7974733304042939568}
   - component: {fileID: 3838003238964472280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_05_standalone_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,13 +265,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7974733304040946294}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4975862715486574}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7974733304041940592
 MeshFilter:
@@ -332,8 +332,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7974733304040946294}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.4
   m_Height: 16.5
   m_Direction: 1
@@ -349,7 +358,7 @@ GameObject:
   - component: {fileID: 7974733304040646232}
   - component: {fileID: 7974733304041940602}
   - component: {fileID: 7974733304042939578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_05_standalone_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,13 +372,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7974733304040946296}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4975862715486574}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7974733304041940602
 MeshFilter:
@@ -433,7 +442,7 @@ GameObject:
   - component: {fileID: 7974733304040646234}
   - component: {fileID: 7974733304041940596}
   - component: {fileID: 7974733304042939572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fir_05_standalone_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,13 +456,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7974733304040946298}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.999998, y: 0.999998, z: 0.999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4975862715486574}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7974733304041940596
 MeshFilter:
