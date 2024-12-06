@@ -27,7 +27,10 @@ public class WormPatrol : MonoBehaviour
         // Manually rotate the worm to face the direction of movement
         if (agent.velocity.sqrMagnitude > Mathf.Epsilon)
         {
-            transform.rotation = Quaternion.LookRotation(Vector3.up, agent.velocity.normalized);
+            Vector3 direction = agent.velocity.normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            lookRotation *= Quaternion.Euler(0, 180, 0); // Apply 180-degree offset
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         }
     }
 }
