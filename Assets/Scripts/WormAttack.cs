@@ -40,6 +40,24 @@ public class WormAttack : MonoBehaviour
     {
         GameObject spit = Instantiate(spitPrefab, spitSpawnPoint.position, Quaternion.identity);
         Rigidbody rb = spit.GetComponent<Rigidbody>();
-        rb.AddForce(spitSpawnPoint.forward * spitForce, ForceMode.Impulse);
+
+        // Calculate direction towards the player
+        Vector3 direction = (player.position - spitSpawnPoint.position).normalized;
+
+        // Add an upward component to the direction
+        Vector3 angledDirection = direction + Vector3.up * 0.2f; // Adjust the upward component as needed
+        angledDirection.Normalize();
+
+        // Add velocity to the spit
+        if (rb != null)
+        {
+            rb.velocity = angledDirection * spitForce;
+        }
+
+        // Apply additional force to simulate gravity
+        rb.AddForce(Vector3.down * 9.81f, ForceMode.Acceleration);
+
+        // Optionally, destroy the spit after a certain time
+        Destroy(spit, 2f);
     }
 }
