@@ -2710,7 +2710,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d4865b291dc0b465d9d621982d162d82,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 77.37
+      value: 76.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4865b291dc0b465d9d621982d162d82,
         type: 3}
@@ -4985,7 +4985,7 @@ MonoBehaviour:
   spitPrefab: {fileID: 5613286215713320788, guid: ac36aa334b45a4ce9810681ee4a9b66d,
     type: 3}
   spitSpawnPoint: {fileID: 2141139426}
-  spitForce: 30
+  spitForce: 10
   attackCooldown: 2
   range: 25
   tetherRange: 35
@@ -5369,7 +5369,7 @@ Transform:
   m_GameObject: {fileID: 2141139425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.00206, z: 0}
+  m_LocalPosition: {x: 0, y: 0.002403, z: -0.000591}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
