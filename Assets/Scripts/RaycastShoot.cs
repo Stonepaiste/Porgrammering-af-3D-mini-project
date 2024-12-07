@@ -11,11 +11,10 @@ public class RaycastShoot : MonoBehaviour
     public Transform gunEnd;
     public GameObject mainCameraObject; // Reference to the main camera GameObject
     public GameObject muzzleFlashPrefab; // Reference to the muzzle flash prefab
+    public GameObject impactEffectPrefab; // Reference to the impact effect prefab
+    //public GameObject ProjectilePrefab; // Reference to the projectile prefab
     private Camera fpsCam;
     private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
-    public GameObject ImpactEffect;
-    //private AudioSource gunAudio;
-    private LineRenderer laserLine;
     private float nextFire;
 
     void Start()
@@ -28,9 +27,6 @@ public class RaycastShoot : MonoBehaviour
         {
             Debug.LogError("Main Camera Object is not assigned.");
         }
-        laserLine = GetComponent<LineRenderer>();
-        //gunAudio = GetComponent<AudioSource>();
-        //fpsCam = GetComponentInParent<Camera>();
     }
 
     void Update()
@@ -44,11 +40,8 @@ public class RaycastShoot : MonoBehaviour
             Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
             RaycastHit hit;
 
-            laserLine.SetPosition(0, gunEnd.position);
-
             if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
             {
-                laserLine.SetPosition(1, hit.point);
                 Debug.Log("Hit: " + hit.collider.name); // Add this line to debug hit detection
                 EnemyDamage enemyDamage = hit.collider.GetComponent<EnemyDamage>();
                 if (enemyDamage != null)
@@ -56,16 +49,12 @@ public class RaycastShoot : MonoBehaviour
                     enemyDamage.TakeDamage(gunDamage);
                 }
                 
-                Instantiate(ImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-
+                Instantiate(impactEffectPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                
                 if (hit.rigidbody != null)
                 {
                     hit.rigidbody.AddForce(-hit.normal * hitForce);
                 }
-            }
-            else
-            {
-                laserLine.SetPosition(1, rayOrigin + (fpsCam.transform.forward * weaponRange));
             }
         }
     }
@@ -73,7 +62,6 @@ public class RaycastShoot : MonoBehaviour
     private IEnumerator ShotEffect()
     {
         //gunAudio.Play();
-        laserLine.enabled = true;
 
         // Instantiate and play the muzzle flash
         GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, gunEnd.position, gunEnd.rotation);
@@ -81,11 +69,10 @@ public class RaycastShoot : MonoBehaviour
         if (ps != null)
         {
             ps.Play();
+         
         }
 
         yield return shotDuration;
-
-        laserLine.enabled = false;
 
         // Destroy the muzzle flash after the shot duration
         Destroy(muzzleFlash);
