@@ -46,6 +46,7 @@ public class RaycastShoot : MonoBehaviour
             if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
             {
                 Debug.Log("Hit: " + hit.collider.name); // Add this line to debug hit detection
+                
                 EnemyDamage enemyDamage = hit.collider.GetComponent<EnemyDamage>();
                 if (enemyDamage != null)
                 {

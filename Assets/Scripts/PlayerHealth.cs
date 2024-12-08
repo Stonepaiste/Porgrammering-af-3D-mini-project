@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= amount;
         // Decrease health
-        if (HUDManager != null && IsDead==false)
+        if (HUDManager != null && IsDead == false)
         {
             HUDManager.DecreaseHealth();
         }
@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         {
             IsDead = true;
             Die();
+            Invoke ("DeathMenuON", 5f);
         }
     }
 
@@ -36,8 +37,23 @@ public class PlayerHealth : MonoBehaviour
         {
             animator.SetTrigger("Death");
         }
+        
 
         // Handle additional death logic
         Debug.Log("Player died!");
     }
+    
+    void DeathMenuON()
+    {
+        DeathMenu deathMenu = FindObjectOfType<DeathMenu>();
+        if (deathMenu != null)
+        {
+            deathMenu.ShowDeathMenu();
+        }
+        else
+        {
+            Debug.LogError("DeathMenu not found in the scene.");
+        }
+    }
+    
 }
