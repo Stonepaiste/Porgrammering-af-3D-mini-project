@@ -16,6 +16,7 @@ public class RaycastShoot : MonoBehaviour
     private Camera fpsCam;
     private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
     private float nextFire;
+    public HUDManager HUDManager;
 
     void Start()
     {
@@ -31,11 +32,13 @@ public class RaycastShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
+        if (Input.GetButtonDown("Fire1") && Time.time > nextFire && HUDManager.shotsLeft > 0)
         {
             nextFire = Time.time + fireRate;
 
             StartCoroutine(ShotEffect());
+            // Decrease shots left
+            HUDManager.DecreaseShotsLeft();
 
             Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
             RaycastHit hit;

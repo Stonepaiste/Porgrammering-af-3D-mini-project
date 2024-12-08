@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class WormBehavior : MonoBehaviour
+public class EnemyAICombined : MonoBehaviour
 {
     public Transform[] waypoints;
     public GameObject player;
@@ -21,6 +21,7 @@ public class WormBehavior : MonoBehaviour
     private GameObject currentTarget;
     private PlayerDetection detection;
     private bool AttackNOW = false;
+    PlayerHealth playerHealth;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class WormBehavior : MonoBehaviour
         agent.updateRotation = false; // Disable automatic rotation
         agent.SetDestination(waypoints[currentWaypointIndex].transform.position);
         InvokeRepeating("DistanceCheck", 0, 0.5f);
+        playerHealth = player.GetComponent<PlayerHealth>(); // Get the PlayerHealth component
     }
 
     void Update()
@@ -57,7 +59,7 @@ public class WormBehavior : MonoBehaviour
 
     void FollowPlayer()
     {
-        if (currentTarget != null)
+        if (currentTarget != null && playerHealth != null && playerHealth.IsDead==false)
         {
             agent.SetDestination(currentTarget.transform.position);
             AttackNOW = true;
@@ -67,6 +69,7 @@ public class WormBehavior : MonoBehaviour
             agent.SetDestination(waypoints[currentWaypointIndex].transform.position);
             AttackNOW = false;
         }
+      
     }
 
     void AttackPlayer()

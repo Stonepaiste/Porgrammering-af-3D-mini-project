@@ -15,9 +15,15 @@ public class Spit : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damageAmount);
+                
+                Invoke("WaitToDestroy", 3f);
             }
             Debug.Log("Player hit!");
         }
+       
+    }
+    void WaitToDestroy()
+    {
         Destroy(gameObject);
     }
 }

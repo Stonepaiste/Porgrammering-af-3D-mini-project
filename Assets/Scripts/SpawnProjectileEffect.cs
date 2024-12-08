@@ -8,12 +8,13 @@ public class SpawnProjectileEffect : MonoBehaviour
     public GameObject projectilePrefab; // The projectile prefab to be spawned
     public float fireRate = 1f; // The rate at which the projectile is fired
     public Camera mainCamera; // Reference to the main camera
+    public HUDManager HUDManager;
 
     private float timeToFire = 0f;
 
     void Update()
     {
-        if (Input.GetMouseButton(0) && Time.time >= timeToFire) // Left Mouse Button
+        if (Input.GetMouseButton(0) && Time.time >= timeToFire && HUDManager.shotsLeft > 0) // Left Mouse Button
         {
             timeToFire = Time.time + 1 / fireRate;
             SpawnProjectile();
@@ -28,7 +29,7 @@ public class SpawnProjectileEffect : MonoBehaviour
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            Vector3 targetPoint;
+            Vector3 targetPoint; // The point where the projectile will be spawned
             if (Physics.Raycast(ray, out hit))
             {
                 targetPoint = hit.point;
