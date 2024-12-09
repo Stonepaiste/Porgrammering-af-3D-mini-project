@@ -2,7 +2,7 @@ Here's an improved and more readable version for your GitHub README:
 
 ---
 
-# **DoomKeen: A Weird Adventure**
+# **KeenOnDoom: A Weird Adventure**
 
 ## **Overview**
 
