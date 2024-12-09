@@ -1,6 +1,4 @@
-Here's an improved and more readable version for your GitHub README:
 
----
 
 # **KeenOnDoom: A Weird Adventure**
 
