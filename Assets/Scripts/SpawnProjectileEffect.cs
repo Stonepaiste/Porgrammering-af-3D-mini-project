@@ -9,6 +9,8 @@ public class SpawnProjectileEffect : MonoBehaviour
     public float fireRate = 1f; // The rate at which the projectile is fired
     public Camera mainCamera; // Reference to the main camera
     public HUDManager HUDManager;
+    
+    public AudioSource laserSound;
 
     private float timeToFire = 0f;
 
@@ -45,6 +47,9 @@ public class SpawnProjectileEffect : MonoBehaviour
 
             // Instantiate the projectile and set its rotation
             Instantiate(projectilePrefab, firePoint.transform.position, rotation);
+            
+            //play lasersound
+            laserSound.Play();
         }
         else
         {
