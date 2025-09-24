@@ -25,7 +25,7 @@ public class SpitAttack : MonoBehaviour
         Rigidbody rb = spit.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.velocity = angledDirection * spitSpeed;
+            rb.linearVelocity = angledDirection * spitSpeed;
         }
 
         // Configure the particle system's shape module

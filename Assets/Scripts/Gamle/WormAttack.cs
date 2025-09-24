@@ -51,7 +51,7 @@ public class WormAttack : MonoBehaviour
         // Add velocity to the spit
         if (rb != null)
         {
-            rb.velocity = angledDirection * spitForce;
+            rb.linearVelocity = angledDirection * spitForce;
         }
 
         // Apply additional force to simulate gravity
